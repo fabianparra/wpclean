@@ -5,6 +5,5 @@
     <?php the_content(); ?>
 </article>
 <?php endwhile; else: ?>
-<p><?php _e('No Results'); ?></p>
 <?php endif; ?>
 <?php get_footer(); ?>
