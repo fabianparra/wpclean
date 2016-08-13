@@ -1,0 +1,18 @@
+/* MORPHOSIS 2016 Main Stylesheet */
+
+//variables and mixins
+@import 'vars';
+@import 'mixins';
+
+//bootstrap
+@import 'bootstrap';
+
+//base
+@import 'partials/global';
+@import 'partials/header';
+@import 'partials/footer';
+
+//sections
+@import 'partials/main';
+@import 'partials/home';
+@import 'partials/category';

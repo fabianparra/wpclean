@@ -1,0 +1,16 @@
+{
+  "name": "WP Clean",
+  "version": "1.0.0",
+  "description": "WP Clean Base Theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fabian Parra",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-livereload": "*",
+    "gulp-sass": "^2.3.2"
+  }
+}
