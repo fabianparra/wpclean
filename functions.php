@@ -10,7 +10,6 @@ add_theme_support( 'post-thumbnails' );
 // Image sizes
 //add_image_size( '640x360', 640, 360, true);
 
-
 // Menu
 register_nav_menus( array(
     'main' => 'Menú Principal',
@@ -22,7 +21,6 @@ add_theme_support( 'automatic-feed-links' );
 
 // Title Tag
 add_theme_support( "title-tag" );
-
 
 // Sidebar
 function sidebar_widgets_init() {
@@ -86,3 +84,4 @@ add_action( 'wp_enqueue_scripts', 'wc_enqueue_scripts' );
 
 // Text Domain
 load_theme_textdomain( 'wpclean', get_template_directory().'/languages' );
+
