@@ -1,17 +1,31 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var livereload = require('gulp-livereload');
+var gulp        = require('gulp');
+var browserSync = require('browser-sync').create();
+var sass        = require('gulp-sass');
 
-gulp.task('sass', function () {
-    gulp.src('./scss/styles.scss')
+var files = [
+    '../css/styles.css',
+    './**/*.php'
+    ];
+
+// Static Server + watching scss/html files
+gulp.task('serve', ['sass'], function() {
+
+    browserSync.init(files, {
+    //browsersync with a php server
+    proxy: "wordpress.local.co",
+    notify: false
+    });
+
+    gulp.watch("scss/**/*.scss", ['sass']);
+    gulp.watch("../**/*.php").on('change', browserSync.reload);
+});
+
+// Compile sass into CSS & auto-inject into browsers
+gulp.task('sass', function() {
+    return gulp.src("scss/**/*.scss")
         .pipe(sass())
-        .pipe(gulp.dest('../css'))
-        .pipe(livereload());
+        .pipe(gulp.dest("../css"))
+        .pipe(browserSync.stream());
 });
 
-gulp.task('watch', function() {
-    livereload.listen();
-    gulp.watch('scss/**/*.scss', ['sass']);
-});
-
-gulp.task('default', ['sass', 'watch']);
+gulp.task('default', ['serve']);

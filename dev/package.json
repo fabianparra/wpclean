@@ -1,5 +1,5 @@
 {
-  "name": "WP Clean",
+  "name": "wpclean",
   "version": "1.0.0",
   "description": "WP Clean Base Theme",
   "main": "index.js",
@@ -9,6 +9,7 @@
   "author": "Fabian Parra",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.17.3",
     "gulp": "*",
     "gulp-livereload": "*",
     "gulp-sass": "^2.3.2"
