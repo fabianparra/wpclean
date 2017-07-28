@@ -2,6 +2,7 @@
 <html <?php language_attributes(); ?>>
     <head>
         <meta charset="<?php bloginfo( 'charset' ); ?>" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/png" href="<?php bloginfo('template_url'); ?>/favicon.png" />
 
         <?php if (is_front_page()) : ?>
