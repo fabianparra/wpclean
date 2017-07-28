@@ -2,6 +2,7 @@
 <html <?php language_attributes(); ?>>
     <head>
         <meta charset="<?php bloginfo( 'charset' ); ?>" />
+        <link rel="icon" type="image/png" href="<?php bloginfo('template_url'); ?>/favicon.png" />
 
         <?php if (is_front_page()) : ?>
           <title><?php bloginfo('name'); ?></title>
