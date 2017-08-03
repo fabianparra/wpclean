@@ -8,7 +8,7 @@
         <?php if (is_front_page()) : ?>
           <title><?php bloginfo('name'); ?></title>
         <?php else: ?>
-          <title><?php wp_title(); ?> | <?php bloginfo('name'); ?></title>
+          <title><?php wp_title(''); ?> | <?php bloginfo('name'); ?></title>
         <?php endif; ?>
 
         <link rel="profile" href="http://gmpg.org/xfn/11" />

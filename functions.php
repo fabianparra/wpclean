@@ -76,6 +76,7 @@ add_action( 'wp_enqueue_scripts', 'wc_enqueue_style' );
 function wc_enqueue_scripts() {
     //jQuery
     wp_enqueue_script('jquery');
+    //wp_enqueue_script('jquery-masonry');
 
     wp_enqueue_script('owl-js', get_bloginfo('template_url') . '/lib/owl-carousel/owl.carousel.min.js', null, '1.3.3', true);
     wp_enqueue_script('bootstrap', get_bloginfo('template_url') . '/js/bootstrap.min.js', null, '3.3.7', true);
